@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-    fmt.Printf("Eine Zeile Text")
+    // fmt.Printf("Eine Zeile Text")
     fp := gofeed.NewParser()
     feed, _ := fp.ParseURL("https://www.heise.de/rss/heise-atom.xml")
     for i := 0; i < 5; i++ {
-            fmt.Println(feedItems[i].Title)
+            fmt.Println(feed.Items[i].Title)
     }
 }
 
